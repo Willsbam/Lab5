@@ -45,10 +45,29 @@ int binary_search(std::vector<std::string> container, std::string input) {
 
 int main(){
     std::vector<std::string> my_data=getStringData();
-    std::cout << linear_search(my_data, "mzzzz") << std::endl;
+    long long time=systemTimeNanoseconds();
+    std::cout << "Index of Linear Search for:'not_here'=" <<linear_search(my_data, "not-here") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
 
-    std::cout << binary_search(my_data, "aaaaa");
+    time=systemTimeNanoseconds();
+    std::cout << "Index of Binary Search for:'not-here'=" <<binary_search(my_data, "not-here") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
 
+    time=systemTimeNanoseconds();
+    std::cout << "Index of Linear Search for:'mzzzz'=" <<linear_search(my_data, "mzzzz") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
+
+    time=systemTimeNanoseconds();
+    std::cout << "Index of Binary Search for:'mzzzz'=" <<binary_search(my_data, "mzzzz") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
+
+    time=systemTimeNanoseconds();
+    std::cout << "Index of Linear Search for:'aaaaa'=" <<linear_search(my_data, "aaaaa") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
+
+    time=systemTimeNanoseconds();
+    std::cout << "Index of Binary Search for:'aaaaa'=" <<binary_search(my_data, "aaaaa") << std::endl;
+    std::cout <<"That case took " <<time-systemTimeNanoseconds() <<" seconds"<< std::endl;
 
 
   return 0;
