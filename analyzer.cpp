@@ -15,7 +15,7 @@ int linear_search(std::vector<std::string> data, std::string input) {
 int binary_search(std::vector<std::string> container, std::string input) {
     int low = 0;
     int high = container.size() - 1;
-    int mid = 0;
+    int mid = container.capacity()/2;
 
     while (low <= high) {
         mid = (high + low);
